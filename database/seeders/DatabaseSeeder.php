@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         $customers = Customer::factory(5)->create();
         $customers->each(function ($customer) {
-                \App\Models\Account::factory(rand(1, 3))
-                    ->create(['customer_id' => $customer->id,
+            \App\Models\Account::factory(rand(1, 3))
+                ->create(['customer_id' => $customer->id,
                 ]);
-            });
+        });
     }
 }

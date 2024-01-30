@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,5 +15,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('customers', \App\Http\Controllers\CustomerController::class);
 Route::resource('customers.accounts', \App\Http\Controllers\AccountController::class)->scoped();
-
-

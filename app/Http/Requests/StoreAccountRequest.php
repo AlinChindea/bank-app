@@ -2,12 +2,11 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Enums\AccountName;
+use App\Enums\AccountName;
 use App\Rules\MOD11;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use Spatie\ValidationRules\Rules\Currency;
-
 
 class StoreAccountRequest extends FormRequest
 {
@@ -19,7 +18,6 @@ class StoreAccountRequest extends FormRequest
         // todo: add logic to ensure that only an existing user can do this
         return true;
     }
-
 
     /**
      * Get the validation rules that apply to the request.

@@ -18,7 +18,7 @@ class MOD11 implements ValidationRule
     /**
      * Run the validation rule.
      *
-     * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString $fail
+     * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString  $fail
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
@@ -31,9 +31,7 @@ class MOD11 implements ValidationRule
     }
 
     /**
-     *
-     * @param mixed $input_number
-     * @return int
+     * @param  mixed  $input_number
      */
     private function mod11Calculator($input_number): int
     {
