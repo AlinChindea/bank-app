@@ -23,8 +23,17 @@ class StoreCustomerRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            //todo: should I limit the length of the ssn?
-            'ssn' => 'required|string',
+            //todo: limit the length of the ssn?
+            'ssn' => 'required|unique:customers,ssn|string',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'A name is required',
+            'ssn.required' => 'A ssn is required',
+            'ssn.unique' => 'This ssn must be unique',
         ];
     }
 }
