@@ -22,13 +22,17 @@ class StoreCustomerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255'],
             //todo: limit the length of the ssn?
-            'ssn' => 'required|unique:customers,ssn|string',
+            'ssn' => ['required', 'unique:customers,ssn', 'string'],
         ];
     }
 
-    public function messages()
+    /**
+     * Customise the error messages for the defined validation rules.
+     * @return array
+     */
+    public function messages(): array
     {
         return [
             'name.required' => 'A name is required',
