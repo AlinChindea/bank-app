@@ -29,11 +29,8 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        // Validate the incoming request
-        $validatedData = $request->validated();
-
-        // Store the credentials if valid
-        $customer = Customer::create($validatedData);
+        // Store the credentials if request is valid
+        $customer = Customer::create($request->validated());
 
         // Return a JSON response
         return response()->json($customer);
@@ -44,7 +41,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return response()->json($customer);
     }
 
     /**
