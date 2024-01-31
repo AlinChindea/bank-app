@@ -31,6 +31,7 @@ class MOD11 implements ValidationRule
     }
 
     /**
+     * Calculate the MOD11 checksum digit.
      * @param  mixed  $input_number
      */
     private function mod11Calculator($input_number): int
@@ -54,7 +55,6 @@ class MOD11 implements ValidationRule
 
         // Return the checksum digit
         // If modulus is 0 or 1, it's typically replaced with specific values or letters (like 0 or X)
-        // depending on the specification you are following.
         return (11 - $modulus) % 11;
     }
 }
