@@ -32,6 +32,7 @@ class MOD11 implements ValidationRule
 
     /**
      * Calculate the MOD11 checksum digit.
+     *
      * @param  mixed  $input_number
      */
     private function mod11Calculator($input_number): int
