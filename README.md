@@ -1,5 +1,5 @@
 ## About Bank App
-A simple Laravel 10+ bank app, featuring a JSON-based REST API in the back-end that's consumed by a JavaScript front-end.
+A basic Laravel 10+ app, featuring a JSON-based REST API in the back-end that's consumed by a JavaScript (Vuejs v3) front-end.
 
 ## Requirements
 The following tools are required in order to start the installation:
@@ -25,8 +25,8 @@ composer install
 php artisan key:generate
 php artisan migrate
 npm install
-npm run build
+npm run dev
 ```
 
 ## Testing
-TBA
+The app should now run at `http://bank-app.test`. To run the development server over `https`, use the `herd secure` command (if you've installed the app using Laravel Herd). To add a customer, head to `https://bank-app.test/customers`. To test the API more comprehensively, I recommend using a specialised tool such as [Postman](https://www.postman.com/). The API's base endpoint is `/api/customers`.
