@@ -17,7 +17,7 @@
                             <option value="checking">Checking</option>
                             <option value="credit_card">Credit card</option>
                             <option value="investment">Investment</option>
-                            <option value="loan">LOAN</option>
+                            <option value="loan">Loan</option>
                             <option value="mortgage">Mortgage</option>
                             <option value="pension">Pension</option>
                             <option value="savings">Savings</option>
